@@ -24,7 +24,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/orderDB");
+// mongoose.connect("mongodb://localhost:27017/orderDB");
+mongoose.connect(
+	"mongodb+srv://admin-noobie:Test123@cluster0.gkznc.mongodb.net/orderDB"
+);
 
 const clientSchema = new mongoose.Schema({
 	username: {
