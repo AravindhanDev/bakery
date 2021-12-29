@@ -1014,7 +1014,7 @@ label {
 	.navbar {
 		width: 100%;
 		background-color: rgb(0, 0, 0);
-		padding: 1rem;
+		padding: 1rem 1.8rem;
 	}
 	.h1 {
 		font-size: 2rem;
