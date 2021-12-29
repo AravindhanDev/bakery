@@ -1,0 +1,46 @@
+:root {
+	--gold: #f54748;
+	--gold-light: rgba(245, 71, 72, 0.5);
+}
+
+#favorites {
+	width: 100vw;
+	padding: 2rem;
+}
+
+.favoriteContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.favorite {
+	box-shadow: 2px 2px 7px #dedede, -2px -2px 7px #dedede;
+	width: 14rem;
+	height: 100%;
+	background-color: #fff;
+	padding: 0.3rem 2rem;
+	margin: 1rem;
+}
+
+.favorite-img {
+	text-align: center;
+	width: 100%;
+	height: 7rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	box-shadow: 2px 2px 5px #ddd, -2px -2px 5px #ddd;
+}
+
+.favorite-rate {
+	font-weight: 600;
+}
+
+@media all and (max-width: 400px) {
+	h6.mb-3 {
+		text-align: center;
+	}
+	.favorite {
+		width: 100vw;
+		margin: 1rem 0;
+	}
+}

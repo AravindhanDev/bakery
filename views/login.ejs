@@ -1,0 +1,64 @@
+<%- include("./partials/header.ejs") -%>
+
+<section id="login" style="display: none">
+	<div class="container">
+		<h4 class="head"><img src="../images/logo.png" /></h4>
+		<br />
+		<div class="form-group">
+			<label for="username">Username</label>
+			<div class="input-group">
+				<input
+					type="text"
+					class="form-control form-control-some"
+					id="username"
+					name="username"
+					placeholder="@jackbauer"
+					readonly
+					onfocus="this.removeAttribute('readonly');"
+					style="background-color: #333; color: #fff"
+					onpaste="return false;"
+				/>
+				<button class="btn btn-dark">
+					<ion-icon name="mail-outline"></ion-icon>
+				</button>
+			</div>
+		</div>
+		<br />
+		<div class="form-group">
+			<label for="username">Password</label>
+			<div class="input-group">
+				<input
+					type="password"
+					class="form-control form-control-some"
+					id="password"
+					name="password"
+					placeholder="********"
+					readonly
+					onfocus="this.removeAttribute('readonly');"
+					style="background-color: #333"
+					onpaste="return false;"
+				/>
+				<button class="btn btn-dark eye"><i class="far fa-eye"></i></button>
+			</div>
+		</div>
+		<a href="/register" style="color: #aaa; font-size: 0.9rem"
+			>Not registered, yet</a
+		>
+		<br />
+		<br />
+		<button
+			class="btn btn-dark btn-block"
+			id="submit"
+			type="submit"
+			style="padding: 0.7rem 0"
+		>
+			Login
+		</button>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/login.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

@@ -1,0 +1,66 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/order.css" />
+
+<div class="order-container" style="display: none">
+	<div class="row">
+		<div
+			class="col-lg-12"
+			style="display: flex; justify-content: space-between"
+		>
+			<a class="user-icn" href="/">
+				<ion-icon name="home" class="home"></ion-icon>
+			</a>
+			<a class="user-icn" href="/account">
+				<ion-icon name="person-circle-outline" class="user"></ion-icon>
+			</a>
+		</div>
+	</div>
+	<div class="row searching">
+		<div class="col-lg-12">
+			<div class="input-group" id="search-bar">
+				<div class="icon">
+					<i class="fas fa-search" style="color: #f54748"></i>
+				</div>
+				<input
+					type="text"
+					style="color: #222 !important"
+					class="form-control form-control-some form-control-sm"
+					id="search"
+					placeholder="search"
+					name="search"
+				/>
+			</div>
+		</div>
+	</div>
+	<div class="row main" id="main">
+		<% orderArr.map((arr) => { %>
+		<div class="order-box">
+			<div class="top">
+				<div class="about-food">
+					<span><%= arr.name %></span>
+					<p class="<%= arr.class2 %>"><%= arr.description %></p>
+				</div>
+				<img src="../images/<%= arr.image %>" class="order-img" />
+			</div>
+			<div class="middle mb-3">
+				<i class="<%= arr.like %> like"></i>
+			</div>
+			<div class="bottom">
+				<p class="order-amt">₹ <%= arr.amount %></p>
+				<button class="btn btn-order btn-sm btn-action <%= arr.class %>">
+					ADD <ion-icon name="add-outline"></ion-icon>
+				</button>
+			</div>
+		</div>
+		<% }) %>
+	</div>
+	<div class="notfound" style="text-align: center"></div>
+	<div id="carting"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/order.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

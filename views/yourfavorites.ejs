@@ -1,0 +1,27 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/yourfavorite.css" />
+
+<section id="favorites" style="display: none">
+	<h6 class="mb-3">
+		<ion-icon name="checkbox-outline" style="font-size: 0.9rem"></ion-icon
+		>&nbsp;&nbsp;Your Favorites:
+	</h6>
+	<div class="favoriteContainer">
+		<% favorites.map((favorite) => { %>
+		<div class="favorite">
+			<img src="../images/<%= favorite.imageURL %>" class="favorite-img" />
+			<strong><%= favorite.name %></strong>
+			<p style="padding-top: 0.7rem; font-size: 0.9rem; text-align: justify">
+				<%= favorite.description %>
+			</p>
+			<p class="favorite-rate">₹ <%= favorite.amount %></p>
+		</div>
+		<% }) %>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/yourfavorites.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

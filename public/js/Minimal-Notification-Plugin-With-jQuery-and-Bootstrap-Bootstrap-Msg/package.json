@@ -1,0 +1,50 @@
+{
+    "name": "bootstrap-msg",
+    "title": "BootstrapMsg",
+    "libraryName": "Msg",
+    "version": "1.0.8",
+    "description": "The jQuery plugin for showing message with Bootstrap alert classes",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --prod",
+        "dev": "webpack --progress --color --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ducdhm/bootstrap-msg.git"
+    },
+    "keywords": [
+        "bootstrap",
+        "bootstrap-alert",
+        "bootstrap-message"
+    ],
+    "author": "Duc Doan (ducdhm@gmail.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ducdhm/bootstrap-msg/issues"
+    },
+    "homepage": "https://github.com/ducdhm/bootstrap-msg#readme",
+    "devDependencies": {
+        "@babel/core": "^7.4.0",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
+        "@babel/plugin-proposal-export-default-from": "^7.2.0",
+        "@babel/preset-env": "^7.4.2",
+        "babel-loader": "^8.0.5",
+        "css-loader": "^2.1.1",
+        "mini-css-extract-plugin": "^0.6.0",
+        "node-sass": "^4.14.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.1",
+        "publish-new-version": "^1.0.0",
+        "sass-loader": "^7.1.0",
+        "string-replace-loader": "^2.1.1",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.12",
+        "wrapper-webpack-plugin": "^2.1.0",
+        "yargs": "^13.2.2"
+    },
+    "dependencies": {
+        "bootstrap": "^3.4.1",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.5.1"
+    }
+}

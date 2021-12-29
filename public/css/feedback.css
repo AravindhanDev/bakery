@@ -1,0 +1,92 @@
+body {
+	background-color: #ecedf1;
+}
+
+:root {
+	--gold: #f54748;
+	--gold-light: rgba(245, 71, 72, 0.5);
+	--gold-lightmax: rgba(245, 71, 72, 0.1);
+}
+
+#feedback {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feedbackContainer {
+	box-shadow: 2px 2px 7px #ddd, -2px -2px 7px #ddd;
+	width: 30rem;
+	background-color: #f8f8f8;
+	padding: 2rem;
+	border-radius: 7px;
+	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+
+.option {
+	padding: 1rem;
+	background-color: #fff;
+	display: flex;
+	box-shadow: 2px 2px 7px #ddd, -2px -2px 7px #ddd;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.opt-img {
+	width: 3rem;
+	height: 3rem;
+	margin-right: 1rem;
+	border-radius: 6px;
+}
+
+.btn-choice {
+	width: 2rem;
+	height: 2rem;
+	transition: all 0.3s;
+	background-color: #fff;
+	border: 2px solid #ddd;
+}
+
+.btn-choice:hover,
+.btn-choice:active {
+	background-color: #888;
+	border: 2px solid transparent;
+	transform: scale(0.82);
+}
+
+.question {
+	font-size: 0.9rem;
+}
+
+.btn {
+	font-weight: 700;
+}
+
+.btn-darker {
+	background: #212121;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.btn-lighter {
+	background: #eee;
+	color: #212121;
+	border-radius: 5px;
+}
+
+@media all and (max-width: 600px) {
+	.feedbackContainer {
+		width: 100%;
+		height: 100%;
+	}
+	.opt-img {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+	.btn-choice {
+		width: 1.5rem;
+		height: 1.7rem;
+	}
+}

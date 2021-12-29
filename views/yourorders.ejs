@@ -1,0 +1,35 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/yourorder.css" />
+
+<section id="orders" style="display: none">
+	<h6 class="mb-3">
+		<ion-icon name="checkbox-outline" style="font-size: 0.9rem"></ion-icon
+		>&nbsp;&nbsp;Your Orders:
+	</h6>
+	<div class="orderContainer">
+		<% orders.map((order) => { %>
+		<div class="order">
+			<span>Invoices : </span><br /><br />
+			<% order.items.map((arr) => { %>
+			<strong class="name"><%= arr.name %></strong><br />
+			<span class="amt">To Pay: <%= arr.amount %></span><br />
+			<span class="qty">Quantity: <%= arr.quantity %></span>
+			<hr style="border-top: 2px dotted #bbb" />
+			<% }) %>
+			<p class="delivery">Delivery Fee : 4</p>
+			<p class="gst">GST : 12</p>
+			<p class="total">Total Pay : <%= order.total %></p>
+			<button class="btn btn-block btn-outline-danger btn-sm genPdf">
+				<i class="far fa-file-pdf"></i>&nbsp;&nbsp;Generate PDF
+			</button>
+		</div>
+		<% }) %>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+<script src="../js/yourorders.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

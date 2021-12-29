@@ -1,0 +1,81 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/account.css" />
+
+<section id="account" style="display: none;">
+	<!-- <h6 class="mb-4" style="font-weight: bold; color: #f54748">
+		<span><i class="far fa-user"></i></span> &nbsp; ACCOUNT DETAILS:
+	</h6> -->
+	<div class="accountContainer">
+		<h6 style="font-weight: 800;" class="username">
+			@ &nbsp; <%=
+			accountDetails.username.toUpperCase() %>
+		</h6>
+		<div class="dropdown-divider"></div>
+		<p>
+			<ion-icon class="icons" name="id-card-outline"></ion-icon class="icons"> &nbsp; <%= accountDetails._id
+			%>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/cart"
+				><ion-icon name="cart-outline"></ion-icon> &nbsp; Your Cart</a
+			>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/yourorders"
+				><ion-icon name="wallet-outline"></ion-icon> &nbsp; Your Orders</a
+			>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/yourfavorites"
+				><ion-icon name="heart-outline"></ion-icon> &nbsp; Favorites</a
+			>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/contactmap"
+				><ion-icon name="call-outline"></ion-icon> &nbsp; Contact</a
+			>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/feedback"
+				><ion-icon name="chatbox-ellipses-outline"></ion-icon> &nbsp; Feedback</a
+			>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a href="/logout">
+				<ion-icon class="icons" name="power-outline"></ion-icon class="icons"> &nbsp; Logout
+			</a>
+		</p>
+		<div class="dropdown-divider"></div>
+		<p class="yourcart">
+			<a  data-toggle="modal" data-target=".bd-example-modal-sm">
+				<ion-icon class="icons" name="trash-outline"></ion-icon class="icons"> &nbsp; Delete My Account
+			</a>
+		</p>
+	</div>
+</section>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm">
+	  <div class="modal-content">
+		<div class="askDel" style="text-align: center;padding: 1rem 1rem 1.5rem 1rem;">
+			<img src="../images/trash.jpg" style="width: 8rem;height: 8rem;" >
+			<span style="display: block;">Are you sure about delete this?</span>
+			<div class="deletebtns mt-2">
+				<button class="btn btn-secondary btn-sm m-2" data-dismiss="modal">Cancel</button>
+				<button class="btn btn-gold btn-sm m-2"><a href="/delete" style="text-decoration: none;color:#fff">Delete</a></button>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../js/account.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

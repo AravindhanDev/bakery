@@ -1,0 +1,63 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/order.css" />
+
+<section id="cart-section">
+	<div class="cart-container">
+		<p class="cart-head">
+			<ion-icon name="bag-check-outline"></ion-icon> &nbsp; Your Cart:
+		</p>
+		<div class="dropdown-divider" style="padding: 0.45rem"></div>
+		<% cartItems.map((arr) => { %>
+		<div class="cart-box">
+			<div class="row">
+				<div class="col-sm-6 mt-3">
+					<p class="cart-in">( <span><%= arr.name %></span> )</p>
+					<p>Payable Amount: ₹ <span class="amount"><%= arr.amount %></span></p>
+					<div class="mod">
+						Quantity:
+						<button class="minus" type="button">
+							<ion-icon name="remove-outline"></ion-icon>
+						</button>
+						<span class="cart-qty"><%= arr.quantity %></span>
+						<button class="add" type="button">
+							<ion-icon name="add-outline"></ion-icon>
+						</button>
+					</div>
+				</div>
+				<div
+					class="col-sm-6 mt-3"
+					class="cart-imgcon"
+					style="text-align: center"
+				>
+					<img class="cart-img" src="../images/<%= arr.image %>" />
+				</div>
+				<p></p>
+			</div>
+			<div class="dropdown-divider"></div>
+		</div>
+		<% }) %>
+		<p style="font-size: 0.9rem">
+			Delivery Fee:
+			<span class="deliveryFee" style="color: #f90716"></span>
+		</p>
+		<p style="font-size: 0.9rem">
+			GST: <span class="gst" style="color: #f90716"></span>
+		</p>
+		<p style="font-size: 0.9rem" class="totalpay">
+			Total Amount to Pay:
+			<span class="total" style="color: #f90716"></span>
+		</p>
+		<button class="btn btn-block payment btn-gold pt-2">
+			Make Payment &nbsp; <ion-icon name="card-outline"></ion-icon>
+		</button>
+		<p class="notfound" style="display: none; text-align: center">
+			<i>Cart is empty</i>
+		</p>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/cart.js"></script>
+<%- include("./partials/footer.ejs") -%>

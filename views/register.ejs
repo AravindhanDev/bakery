@@ -1,0 +1,69 @@
+<%- include("./partials/header.ejs") -%>
+
+<section id="register" style="display: none">
+	<div class="container">
+		<h4 class="head"><img src="../images/logo.png" /></h4>
+		<br />
+		<div class="form-group">
+			<label for="username">Username</label>
+			<div class="input-group">
+				<input
+					type="text"
+					class="form-control form-control-some"
+					id="username"
+					name="username"
+					placeholder="@jackbauer"
+					readonly
+					onfocus="this.removeAttribute('readonly');"
+					style="background-color: #333; color: #fff"
+					onpaste="return false;"
+				/>
+				<button class="btn btn-dark">
+					<ion-icon name="mail-outline"></ion-icon>
+				</button>
+			</div>
+			<span style="color: #aaa; font-size: 0.9rem"
+				>we never share you credentials with anyone.</span
+			>
+		</div>
+		<br />
+		<div class="form-group">
+			<label for="username">Password</label>
+			<div class="input-group">
+				<input
+					type="password"
+					class="form-control form-control-some"
+					id="password"
+					name="password"
+					placeholder="********"
+					readonly
+					onfocus="this.removeAttribute('readonly');"
+					style="background-color: #333"
+					onpaste="return false;"
+				/>
+				<button class="btn btn-dark eye" type="button">
+					<i class="far fa-eye"></i>
+				</button>
+			</div>
+		</div>
+		<a href="/login" style="color: #aaa; font-size: 0.9rem"
+			>Already a registered client, Login</a
+		>
+		<br />
+		<br />
+		<button
+			class="btn btn-dark btn-block"
+			id="submit"
+			type="submit"
+			style="padding: 0.7rem 0"
+		>
+			Register
+		</button>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/register.js"></script>
+
+<%- include("./partials/footer.ejs") -%>
